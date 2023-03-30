@@ -7,6 +7,11 @@ var promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     var age = ageElement.value;
     var name = nameElement.value;
+     if(!(name && age)){
+		 alert("Please enter valid details")
+	 }
+	  return;
+	  
     if (age < 18) {
       reject(`Oh sorry ${name}. You aren't old enough`);
     } else {
